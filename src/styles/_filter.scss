@@ -1,0 +1,16 @@
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 42px auto;
+    input{
+        height: 55px;
+        width: 480px;
+    }
+
+    select{
+        height: 55px;
+        width: 200px;
+    }
+}
