@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {} from '../assets/images/glass.svg'
 
-const Filter = () => {
+const Filter = ({ data }) => {
+
+    const [selectedContinent, setSelectedContinent] = useState("");
+    const continents = ["Americas", "Asia", "Europe", "Oceania", "Africa", "Antartic"]
+
     return (
         <div className='filter'>
-            <input type="search" placeholder='Search for a country'/>
+            <input type="search" placeholder="Search for a country..."/>
 
-            <select name="contient" id="contient" >
-                <option value="">Filter by region</option>
-                <option value="America">America</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europe</option>
-                <option value="Oceania">Oceania</option>
-                <option value="Africa">Africa</option>
+            <select name="contient" id="contient" onChange={(e) => setSelectedContinent(e.target.value)} >
+                <option value=""> -- Filter by region --</option>
+                {continents.map(continent => {
+                       return <option value={continent} key={continent}>{continent}</option>
+                })}
             </select>
         </div>
     );
