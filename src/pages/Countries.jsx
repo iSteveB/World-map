@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import Cards from './Cards';
+import Cards from '../components/Cards';
 
 
 const Countries = () => {
