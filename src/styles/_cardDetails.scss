@@ -1,0 +1,36 @@
+.card-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    h1{
+        font-size: 2rem;
+        margin: 16px 0px;
+    }
+
+    .flag-details {
+        width: 35%;
+        img {
+            width: 560px;
+            height: 400px;
+        }
+    }
+
+    .country-details {
+        width: 40%;
+    }
+
+    .details {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+
+        p{
+            margin: 10px 0;
+        }
+    }
+    
+    .bold{
+        font-weight: bold;
+    }
+}
