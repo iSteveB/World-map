@@ -11,7 +11,7 @@ const BorderCountries = ({ country }) => {
     return (
         <div className={ theme === 'dark' ? 'border-countries' : 'border-countries' }>
             <span>Border Countries : </span>
-            {country.map((country, ccn3) => {
+            {country.map((country) => {
                 return (
                         country.borders
                             ? country.borders.map((borderCountry, index) => (
