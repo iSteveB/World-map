@@ -6,11 +6,11 @@ import { ThemeContext } from '../context/ThemeContext'
 
 const BorderCountries = ({ country }) => {
 
-    const theme = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
     
     return (
         <div className={ theme === 'dark' ? 'border-countries' : 'border-countries' }>
-            <span>Border Countries : </span>
+            <span> Border Countries : </span>
             {country.map((country) => {
                 return (
                         country.borders
