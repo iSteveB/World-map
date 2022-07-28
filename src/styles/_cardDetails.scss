@@ -1,0 +1,81 @@
+.card-details {
+    display: flex;
+    flex-direction: column;
+    height: 83vh;
+
+    &.dark{
+        color: hsl(0, 0%, 100%);
+
+        button{
+            background-color: hsl(209, 23%, 22%);
+            color: hsl(0, 0%, 100%);
+        }
+
+        a{
+            color: hsl(0, 0%, 100%);
+        }
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80vh;
+
+        h1 {
+            font-size: 2rem;
+            margin: 16px 0px;
+        }
+
+        .flag-details {
+            width: 35%;
+            img {
+                width: 560px;
+                height: 400px;
+            }
+        }
+
+        .country-details {
+            width: 40%;
+        }
+
+        .country-infos {
+            width: 450px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 42px;
+
+            p {
+                margin: 10px 0;
+            }
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    }
+
+    .button-back{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 5px 0px rgba(121, 121, 121, 0.526);
+        border-radius: 4px;
+        background-color: white;
+        border: none;
+        width: 120px;
+        height: 40px;
+        margin: 30px 90px;
+        transition: all 0.2s ease;
+        cursor: pointer;
+
+        img{
+            margin-right: 3px;
+        }
+
+        &:hover{
+            transform: scale(1.1)
+        }
+    }
+}
