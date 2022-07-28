@@ -42,7 +42,7 @@ const CardDetails = () => {
                     <div key={countryCca3} className='details'>
                         <div className='flag-details'>
                             <img
-                                src={country.flags.png}
+                                src={country.flags.svg}
                                 alt={country.name.common}
                             />
                         </div>
