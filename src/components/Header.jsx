@@ -1,11 +1,9 @@
 import { useContext } from 'react';
-
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { ThemeContext } from '../context/ThemeContext';
 
 import moon from '../assets/images/moon.svg';
 import sun from '../assets/images/sun.svg';
-
-import { ThemeContext } from '../context/ThemeContext';
 
 const Header = () => {
 

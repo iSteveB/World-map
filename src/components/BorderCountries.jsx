@@ -1,15 +1,9 @@
-
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-
-import { ThemeContext } from '../context/ThemeContext'
 
 const BorderCountries = ({ country }) => {
 
-    const { theme } = useContext(ThemeContext);
-    
     return (
-        <div className={ theme === 'dark' ? 'border-countries' : 'border-countries' }>
+        <div className='border-countries'>
             <span> Border Countries : </span>
             {country.map((country) => {
                 return (

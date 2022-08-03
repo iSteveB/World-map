@@ -30,7 +30,7 @@ const Countries = () => {
     useEffect(() => {
         axios
             .get('https://restcountries.com/v3.1/all')
-            .then((res) => setData(res.data));
+            .then(res => setData(res.data));
     }, []);
 
     return (
@@ -45,7 +45,7 @@ const Countries = () => {
                     />
                     <img
                         src={theme === 'light' ? search : searchDark}
-                        alt='search'
+                        alt='search icon'
                     />
                 </div>
 
@@ -65,19 +65,19 @@ const Countries = () => {
                     </select>
                     <img
                         src={theme === 'light' ? chevron : chevronDark}
-                        alt='chevron'
+                        alt='chevron icon'
                     />
                 </div>
             </div>
 
             <div className='cards'>
                 {data
-                    .filter((country) => {
+                    .filter(country => {
                         return country.translations.fra.common
                             .toLowerCase()
                             .includes(searchCountry.toLowerCase());
                     })
-                    .filter((country) => {
+                    .filter(country => {
                         return country.region
                             .toLowerCase()
                             .includes(selectedContinent.toLowerCase());

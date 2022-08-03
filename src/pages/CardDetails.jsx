@@ -1,8 +1,8 @@
-import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
 import { ThemeContext } from '../context/ThemeContext';
+
+import axios from 'axios';
 
 import BorderCountries from '../components/BorderCountries';
 
@@ -19,8 +19,8 @@ const CardDetails = () => {
     useEffect(() => {
         axios
             .get(`https://restcountries.com/v3.1/alpha/${countryCca3}`)
-            .then((response) => setData(response.data))
-            .catch((err) => console.log(err));
+            .then(response => setData(response.data))
+            .catch(err => console.log(err));
     }, [countryCca3]);
 
     return (
@@ -29,11 +29,7 @@ const CardDetails = () => {
                 theme === 'light' ? 'card-details' : 'card-details dark'
             }>
             <button className='button-back' onClick={() => navigate(-1)}>
-                {' '}
-                <img
-                    src={theme === 'light' ? arrow : arrowDark}
-                    alt='back-button'
-                />{' '}
+                <img src={theme === 'light' ? arrow : arrowDark} alt='back-button'/>
                 Back
             </button>
 
@@ -52,13 +48,13 @@ const CardDetails = () => {
                             <div className='country-infos'>
                                 <div>
                                     <p>
-                                        <span>Native Name : </span>{' '}
+                                        <span>Native Name : </span>
                                         {Object.values(country.name.nativeName)
                                             .map((name) => name.common)
                                             .join(', ')}
                                     </p>
                                     <p>
-                                        <span>Population : </span>{' '}
+                                        <span>Population : </span>
                                         {country.population.toLocaleString()}
                                     </p>
                                     <p>
@@ -103,7 +99,6 @@ const CardDetails = () => {
                                     </p>
                                 </div>
                             </div>
-
                             <BorderCountries country={data} />
                         </div>
                     </div>

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext'
 
@@ -13,7 +12,6 @@ const Cards = ({ country }) => {
             <img src={ country.flags.png } alt={ country.name.common } />
 
             <div className="card-infos">
-
                 <h3>{ country.name.common }</h3>
                 <p> <span>Population:</span> { country.population.toLocaleString() }</p>
                 <p> <span>Continent:</span> { country.region }</p>
