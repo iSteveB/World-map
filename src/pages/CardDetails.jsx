@@ -44,7 +44,9 @@ const CardDetails = () => {
                         </div>
 
                         <div className='country-details'>
+
                             <h1>{country.name.common}</h1>
+                            
                             <div className='country-infos'>
                                 <div>
                                     <p>

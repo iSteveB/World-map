@@ -1,15 +1,14 @@
 .card-details {
     display: flex;
     flex-direction: column;
-    
-    &.dark{
 
-        button{
+    &.dark {
+        button {
             background-color: hsl(209, 23%, 22%);
             color: hsl(0, 0%, 100%);
         }
 
-        a{
+        a {
             color: hsl(0, 0%, 100%);
         }
     }
@@ -24,15 +23,13 @@
             margin: 16px 0px;
         }
 
-        .flag-details {
-            width: 40%;
-            img {
-                width: 100%;
-                height: 100%;
-            }
+        .flag-details img {
+            width: 100%;
+            height: 100%;
         }
 
-        .country-details {
+        .country-details,
+        .flag-details {
             width: 40%;
         }
 
@@ -52,7 +49,7 @@
         }
     }
 
-    .button-back{
+    .button-back {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -63,31 +60,51 @@
         border: none;
         width: 120px;
         height: 40px;
-        margin: 30px 90px;
+        margin: 30px 5%;
         transition: all 0.2s ease;
         cursor: pointer;
 
-        img{
+        img {
             margin-right: 3px;
         }
 
-        &:hover{
-            transform: scale(1.1)
+        &:hover {
+            transform: scale(1.1);
         }
     }
+}
 
-    @media screen and (max-width : 1000px){
+@media screen and (max-width: 1000px) {
+    .card-details {
+        height: 100%;
 
-        .card-details{
-            height: 100%;
+        .button-back {
+            margin: 40px 5%;
         }
-        .details{
+
+        .details {
             flex-direction: column;
+            align-items: flex-start;
+            margin: auto 5%;
             height: 100%;
 
             .flag-details {
                 width: 90%;
                 height: 100%;
+            }
+
+            .country-infos {
+                flex-direction: column;
+
+                p {
+                    font-size: 1.15rem;
+                    margin: 20px 0;
+                }
+            }
+
+            .country-details,
+            .flag-details {
+                width: 100%;
             }
         }
     }

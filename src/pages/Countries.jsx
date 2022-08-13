@@ -23,8 +23,7 @@ const Countries = () => {
         'Asia',
         'Europe',
         'Oceania',
-        'Africa',
-        'Antartic',
+        'Africa'
     ];
 
     useEffect(() => {
